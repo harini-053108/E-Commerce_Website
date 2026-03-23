@@ -35,8 +35,6 @@
 
 ---
 
-
-
 ## 📸 Project Showcase
 
 <div align="center">
@@ -100,4 +98,3 @@ To evolve this frontend prototype into a production-ready **MERN Stack** applica
   *Experience the luxury "Dark Academia" Pizza ordering interface live!*
   
 </div>
-
