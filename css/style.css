@@ -519,7 +519,14 @@ img {
     padding: 0.8rem;
     border-radius: 8px;
 }
-
+.contact-form label {
+    color: #D4AF37 !important; /* Gold labels for luxury look */
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
 .contact-form .form-control:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.2rem rgba(193, 39, 45, 0.25);
