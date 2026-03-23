@@ -1,4 +1,9 @@
+/* ========================================
+   ITALIAN PIZZA - CUSTOM STYLES
+   Theme: Red, Green, White (Italian Flag)
+   ======================================== */
 
+/* CSS Variables for Light and Dark Theme */
 :root {
     --primary-color: #C1272D; /* Italian Red */
     --secondary-color: #009246; /* Italian Green */
@@ -33,16 +38,15 @@
 }
 
 body {
-    background-color: #0d0d0d; /* Deep Dark Background */
-    color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Luxury Font for Headings */
-h1, h2, .section-title, .pizza-name {
-    font-family: 'Playfair Display', serif; /* Intha font-ah HTML-la import panniko */
-    color: #D4AF37 !important; /* Gold Color */
-    letter-spacing: 1px;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 a {
@@ -60,8 +64,7 @@ img {
    NAVIGATION BAR
    ======================================== */
 .navbar {
-    background: rgba(13, 13, 13, 0.9) !important;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    background: var(--bg-light);
     box-shadow: 0 2px 10px var(--shadow);
     padding: 1rem 0;
     transition: all 0.3s ease;
@@ -79,7 +82,7 @@ img {
 }
 
 .navbar-nav .nav-link {
-    color: #e0e0e0 !important;
+    color: var(--text-dark) !important;
     font-weight: 500;
     margin: 0 0.5rem;
     padding: 0.5rem 1rem !important;
@@ -89,31 +92,10 @@ img {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #D4AF37 !important;
+    color: var(--primary-color) !important;
     background: rgba(193, 39, 45, 0.1);
 }
-.custom-navbar {
-    background: linear-gradient(45deg, #ff4d4d, #ff9900);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
 
-.custom-navbar .nav-link,
-.custom-navbar .navbar-brand {
-    color: white !important;
-}
-/* Navbar Toggler Icon (Hamburger Menu) White color */
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5) !important; /* Border color */
-}
-
-.navbar-toggler-icon {
-    filter: invert(1) brightness(100%) !important; /* Black icon-ah White-ah mathum */
-}
-
-/* Toggle button click pannum pothu vara focus outline remove panna */
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.5) !important;
-}
 .cart-link {
     position: relative;
 }
@@ -148,68 +130,17 @@ img {
 .theme-toggle:hover {
     transform: scale(1.1);
 }
-/* Glassmorphism for Navbar & Cards */
-.navbar, .pizza-card, .cart-summary {
-    background: rgba(255, 255, 255, 0.05) !important;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
 
-/* Luxury Accent Colors (Gold & Deep Red) */
-:root {
-    --primary-color: #8B0000; /* Deep Crimson */
-    --accent-gold: #D4AF37;   /* Classic Gold */
-    --bg-dark: #121212;      /* Midnight Black */
-}
-
-/* Hover Effects for Cards */
-.pizza-card {
-    background: rgba(255, 255, 255, 0.03) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.2) !important; /* Subtle Gold Border */
-    border-radius: 20px;
-    padding: 20px;
-    transition: all 0.4s ease;
-}
-
-.pizza-card:hover {
-    border-color: #D4AF37 !important; /* Hover-la Gold highlight aagum */
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
-}
-
-/* Button Refinement */
-.btn-primary {
-    background: linear-gradient(45deg, #8B0000, #D4AF37);
-    border: none;
-    font-weight: 600;
-    padding: 10px 25px;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
-}
-
-.btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    transform: scale(1.05);
-}
 /* ========================================
    HERO SECTION
    ======================================== */
 .hero-section {
-    background: linear-gradient(135deg, #ff4d4d, #ff9900);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
-    padding: 120px 0;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 20px;
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
 }
 
 .pizza-animation {
@@ -289,15 +220,7 @@ img {
     border-radius: 50%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
-#pizzaSearch {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(212, 175, 55, 0.3) !important;
-    color: #ffffff !important;
-}
 
-#pizzaSearch::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-}
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -606,9 +529,9 @@ img {
    FOOTER
    ======================================== */
 .footer {
-    background: #080808 !important;
+    background: var(--bg-secondary);
     color: var(--text-dark);
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 1px solid var(--border-color);
 }
 
 .footer h4, .footer h5 {
@@ -1104,64 +1027,4 @@ img {
 
 .text-success {
     color: var(--success) !important;
-}
-/* ========================================
-   ULTIMATE DARK LUXURY OVERRIDE
-   ======================================== */
-
-/* Force Dark Background on Everything */
-body, html, .bg-light, .bg-secondary, .section-header {
-    background-color: #0a0a0a !important;
-    color: #e0e0e0 !important;
-}
-
-/* Luxury Gold Headings */
-h1, h2, h3, .section-title, .pizza-name, .navbar-brand {
-    color: #D4AF37 !important;
-    font-family: 'Playfair Display', serif !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-/* Glassmorphism Cards */
-.pizza-card, .review-card, .contact-form, .cart-summary {
-    background: rgba(255, 255, 255, 0.03) !important;
-    backdrop-filter: blur(15px) !important;
-    border: 1px solid rgba(212, 175, 55, 0.2) !important;
-    border-radius: 20px !important;
-    color: #ffffff !important;
-}
-
-/* Card Hover Effect */
-.pizza-card:hover {
-    border-color: #D4AF37 !important;
-    transform: translateY(-10px) !important;
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2) !important;
-}
-
-/* Descriptions & Small Text */
-.pizza-desc, .section-subtitle, .text-light, .footer-links a {
-    color: #b0b0b0 !important;
-}
-
-/* Buttons Glow */
-.btn-primary {
-    background: linear-gradient(45deg, #8B0000, #D4AF37) !important;
-    border: none !important;
-    color: white !important;
-    font-weight: bold !important;
-    box-shadow: 0 0 15px rgba(139, 0, 0, 0.4) !important;
-}
-
-/* Navbar Darkening */
-.navbar {
-    background: rgba(10, 10, 10, 0.95) !important;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
-}
-
-.nav-link {
-    color: #ffffff !important;
-}
-
-.nav-link:hover {
-    color: #D4AF37 !important;
 }
